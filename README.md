@@ -15,5 +15,8 @@ The project contains different versions :
 
 - v3 : final version "full canvas" (no SVG)
 
+Demo version on codepen :
+https://codepen.io/gregja/project/full/ZGjEmR
+
 Link to the original version of Lea Rosema :
 https://codepen.io/terabaud/pen/qZYoZK
