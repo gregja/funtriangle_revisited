@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Triangle fun revisited v2 - combine SVG + Canvas - works fine</title>
+		<style>
+			body {
+				background: #333;
+				margin: 0;
+				overflow: hidden;
+			}
+
+			#container {
+					position: relative;
+					width: 500px; height: 500px;
+			}
+
+			#container * {
+					position: absolute;
+			}
+
+			.btn-addtriangle {
+				position: absolute;
+				background: #639;
+				color: #fff;
+				border:1px solid #000;
+				font: 16px sans-serif;
+				left:0;
+				top:0;
+			}
+
+			.link-saveImage {
+				text-decoration: none;
+				position: absolute;
+				background: #639;
+				color: #fff;
+				border:1px solid #000;
+				font: 16px sans-serif;
+				left:120px;
+				top:0;
+			}
+
+			svg{
+				width:100vw;
+				height:100vh;
+			}
+
+			svg circle.grav-point {
+				fill: silver;
+			}
+
+			svg circle.draggable {
+				fill: red;
+				cursor: pointer;
+			}
+
+			svg circle.inner-point {
+				fill: salmon;
+			}
+
+			svg circle.inner {
+				stroke-width: 2;
+				stroke: salmon;
+				fill: none;
+			}
+
+			svg circle.circum-point {
+				fill: lawngreen;
+			}
+
+			svg circle.circum {
+				stroke-width: 2;
+				stroke: lawngreen;
+				fill: none;
+			}
+
+			svg path {
+				stroke-width: 4;
+				stroke: white;
+				fill: none;
+			}
+		</style>
+	</head>
+ <body>
+	<div id="container"></div>
+	<button class="btn-addtriangle" onclick=trianglefunModule.addTriangle()>Add triangle</button>
+	<a class="link-saveImage" href="" download="fun_triangle.png" onclick=trianglefunModule.saveImage(this)>Save Image</a>
+	<script src="main_v2.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+		  console.log("DOM fully loaded and parsed");
+		  trianglefunModule.init();
+		});
+	</script>
+</body>
+</html>

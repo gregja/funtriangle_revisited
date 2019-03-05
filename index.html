@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Triangle fun revisited - final version - no SVG, full canvas</title>
+		<style>
+		body {
+			background: #333;
+			margin: 0;
+			overflow: hidden;
+		}
+		.btn-addtriangle {
+			position: absolute;
+			background: #639;
+			color: #fff;
+			border:1px solid #000;
+			font: 16px sans-serif;
+			left:0;
+			top:0;
+		}
+		.link-saveImage {
+			text-decoration: none;
+			position: absolute;
+			background: #639;
+			color: #fff;
+			border:1px solid #000;
+			font: 16px sans-serif;
+			left:120px;
+			top:0;
+		}
+		</style>
+	</head>
+ <body>
+	<div id="container"></div>
+	<button class="btn-addtriangle" onclick=trianglefunModule.addTriangle()>Add triangle</button>
+	<a class="link-saveImage" href="" download="fun_triangle.png" onclick=trianglefunModule.saveImage(this)>Save Image</a>
+	<script src="main_v3.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+		  console.log("DOM fully loaded and parsed");
+		  trianglefunModule.init();
+		});
+	</script>
+</body>
+</html>
